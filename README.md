@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Tema
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Tema Recebido:** O tema que recebi foi sobre uma lista de compras.
 
-## Available Scripts
+# Instalação e uso
 
-In the project directory, you can run:
+**Instalação:** 
+* git clone https://github.com/seu-usuario/seu-repositorio.git
 
-### `npm start`
+* cd nome-do-seu-projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Uso:**
 
-### `npm test`
+* npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Funcionalidades
 
-### `npm run build`
+## Componentes Principais:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**ListaCompras:** Componente principal que gerencia o estado da lista de compras e renderiza a interface.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estado do Componente:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **compras:** Array que armazena as compras adicionadas.
 
-### `npm run eject`
+* **newCompras:** String que guarda o valor do input de nova compra.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **isEditing:** Booleano que indica se estamos editando um item existente na lista.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **currentIndex:** Índice do item que está sendo editado.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Funções Principais:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* **addCompra:** Adiciona uma nova compra à lista ou salva a edição de uma compra existente.
 
-## Learn More
+* **removeCompras:** Remove uma compra da lista com base no índice.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* **editCompra:** Prepara o estado para editar uma compra existente ao clicar no botão de edição.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Componentes React Utilizados:
 
-### Code Splitting
+* **useState:** Hook do React utilizado para gerenciar o estado local dos componentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* **useCallback:** Hook utilizado para memoizar funções callback, evitando recriações desnecessárias de funções.
 
-### Analyzing the Bundle Size
+* **onChange:** Evento usado para capturar e atualizar o estado do input de nova compra.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **onClick:** Evento utilizado nos botões de adicionar, editar e remover compras
